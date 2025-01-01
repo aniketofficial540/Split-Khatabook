@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPLIT</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <header>SPLIT</header>
+    <div class="container">
+        <label for="event-name">Name of the Event:</label>
+        <input type="text" id="event-name" placeholder="Enter event name">
+
+        <div class="dynamic-table" id="items-table">
+            <h3>Items Brought</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item Name</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <td><input type="text" placeholder="Name"></td>
+                    <td><input type="number" placeholder="Contribution" min="0"></td>
+                    <td><button onclick="deleteRow(this)">Delete</button></td>
+                </tbody>
+            </table>
+            <button style="width: 150px;" onclick="addItemRow()">Add Item</button>
+        </div>
+
+        <div class="dynamic-table" id="participants-table">
+            <h3>Participants and Contributions</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Contribution</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <td><input type="text" placeholder="Name"></td>
+                    <td><input type="number" placeholder="Contribution" min="0"></td>
+                    <td><button onclick="deleteRow(this)">Delete</button></td>
+                </tbody>
+            </table>
+            <button style="width: 150px;" onclick="addParticipantRow()">Add Participant</button>
+        </div>
+
+        <button style="width: 150px;" onclick="calculate()">Calculate</button>
+
+        <div class="result hidden" id="result-section">
+            <h3>Results</h3>
+
+            <div id="items-summary">
+                <h4>Items and Prices:</h4>
+                <ul></ul>
+            </div>
+
+            <div id="participants-summary">
+                <h4>Participants and Contributions:</h4>
+                <ul></ul>
+            </div>
+
+            <div id="calculation-summary">
+                <h4>Calculations:</h4>
+                <ul></ul>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">Made by Aniket</footer>
+</body>
+
+</html>
